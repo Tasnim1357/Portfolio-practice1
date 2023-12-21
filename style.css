@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+
+
+*{
+
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family:'Space Grotesk';
+
+}
+.nav{
+    height:80px;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8%;
+    align-items: center;
+}
+.nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+.nav ul li a{
+    color: #1c1c1c;
+    position: relative;
+}
+.nav ul li a::after{
+    content: '';
+    position: absolute;
+    top:100%;
+    left:0;
+    height: 2px;
+    width: 0%;
+    background-color: #1c1c1c;
+    transition: all 0.6s;
+}
+.nav ul li a:hover:after{
+    width: 100%;
+}
+
+.nav .logo img{
+    margin-top: -1.875rem;
+}
+
+
+.nav .social{
+     
+    display: flex;
+    gap:15px;
+}
+
+.nav .social .icon i{
+    font-size: 1.1rem;
+ transition: all 0.6s ;
+ cursor: pointer;
+}
+.nav .social .icon:hover i{
+    transform: translateY(-5px) scale(1.1);
+}
+.nav .fa-bars{
+    font-size: 1.2rem;
+    padding: 12px 13px;
+    border: 1px solid #1c1c1c;
+    cursor: pointer;
+    transition: 0.6s;
+    display: none;
+}
+.nav .fa-bars:hover{
+    background-color: #5ddda0;
+    border-color: #5ddda0;
+    
+}
+
+/*  Hero section*/
+.hero-wrapper{
+    padding: 5% 8%;
+}
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero .content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+} 
+
+.hero .content h2{
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.hero .content h1{
+    font-size: 4.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+.hero .content h1 i{
+    color: #5ddda0;
+}
+.hero .content p{
+    font-size: 16px;
+    width: 80%;
+    margin: 12px 0;
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+button{
+    font-size: 1rem;
+    padding: 8px 12px;
+    background-color: #5ddda0;
+    color: #000;
+    border: 1px solid #000;
+    outline: none;
+    font-weight: 600;
+    transition: 0.6s;
+    box-shadow: 5px 5px 0 black;
+}
+button:hover{
+    box-shadow: -5px -5px 0 black;
+}
+.hero .image-container{
+    width: 40%;
+    position: relative;
+}
+.hero .image-container img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+}
+.projects{
+    position: absolute;
+    top:10%;
+    right:-1%;
+    border: 1px solid #000;
+    background-color: #fff;
+    box-shadow: 5px 5px 0 black;
+    padding: 2px 8px;
+    transition: all 0.6s;
+}
+.projects:hover,
+.experience:hover{
+    box-shadow: -5px -5px 0 black;
+}
+.experience{
+ position: absolute;
+ bottom: 25px;
+ left: 0;
+ border: 1px solid #000;
+ background-color: #fff;
+ box-shadow: 5px 5px 0 black;
+ padding: 2px 8px;
+ transition: all 0.6s;
+}
+
+/* Hero ends */
+/* Service section starts */
+.services-wrapper{
+    padding: 3% 8%;
+}
+.service{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Heading{
+    font-size: 4rem;
+    padding-left: 2%;
+    border-left:10px solid #5ddda0 ;
+    
+}
+.service .cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 28px;
+}
+.service .cards .card{
+    width: 100%;
+    padding: 6.5% 5%;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 0 black;
+    transition: all 0.6s;
+}
+.service .cards .card:hover{
+    box-shadow: -5px -5px 0 #000;
+}
+.service .cards .card h2{
+    font-size: 2.1rem;
+}
+.service .cards .card p{
+    font-size: 17px;
+}
+
+
+/* Service section ends */
+
+/* Gallery section starts */
+.gallery-wrapper{
+    padding: 5% 8%;
+}
+.gallery{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+.gallery .post-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:5%;
+    width: 100%;
+}
+.gallery .post-container .post{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    width: 45%;
+    gap: 15px;
+}
+.gallery .post-container .post:after{
+    content: '';
+    position: absolute;
+    top:-100%;
+    left:-15%;
+    width: 110%;
+    height: 5px;
+    transform: rotate(-18deg);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 10px 15px #fff;
+    transition: all 0.6s;
+
+}
+.gallery .post-container .post:hover:after{
+    top:110%;
+    left:0;
+}
+/* Gallery section ends */
+/* Work section starts */
+
+.work-wrapper{
+    padding: 5% 8%;
+
+}
+.work{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.work .container{
+    display: flex;
+    grid-area: 8px;
+    flex-wrap: wrap;
+}
+/* Work section endss */
+/* Contact section starts */
+.contact-wrapper{
+    padding: 5% 8%;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    border: 1x solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 #000;
+    padding: 3% 5%;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.contact .social{
+    display: flex;
+    gap:20px ;
+
+}
+.contact .social .icon{
+    height: 45px;
+    width: 45px;
+    border: 1px solid #000;
+    border-radius: 50%;
+   box-shadow: 3px 3px 0 #000;
+   transition:  0.6s;
+   position: relative;
+   cursor: pointer;
+}
+.contact .social .icon:hover{
+    box-shadow: -3px -3px 0 #000;
+}
+.contact .social .icon i{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.2rem;
+    align-items: flex-start;
+    gap:18px;
+    margin-top: 50px;
+}
+
+form input,textarea{
+    padding: 1%;
+    width: 100%;
+   outline: none;
+   border-radius:  5px;
+   box-shadow: 3px 3px 0 #000;
+    font-size: 1.3rem;
+
+}
+
+form button{
+    width: 10%;
+}
+.footer{
+    padding: 3% 8%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .logo{
+  margin-top: -4.25rem;
+}
+
+/* Contact section ends */
+
+
+
+
+@media(max-width:900px){
+    .nav{
+        position: relative;
+    }
+    .nav .fa-bars{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        top:100%;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+        height: 0;
+        background-color: #1c1c1c;
+        transition: 0.6s;
+        opacity: 0;
+    }
+    .nav ul li{
+        display: block;
+        margin: 18px 0;
+        padding-left: 8% !important;
+        padding: 5px 0;
+    }
+    .nav ul li a{
+        color: #5ddda0;
+    }
+    .nav ul li a::after{
+        background-color: #5ddda0;
+    }
+   .nav .show{
+        height: 40vh;
+        opacity: 1;
+    }
+    .hero{
+        flex-direction: column;
+    }
+   
+    .hero .content{
+        width: 100%;
+    }
+    .hero .image-container{
+        width: 70%;
+        margin: 50px;
+    }
+    
+     /* hero section ended */
+     /* Footer */
+     form button{
+        width: 25% ;
+     }
+     .footer{
+        flex-direction: column;
+        align-items: center;
+       
+     }
+     .footer h4{
+        text-align: center;
+     }
+     
+}
+@media(max-width:769px){
+    #nav-social{
+ display: none;
+    }
+     #social-icon{
+        display: flex !important;
+     }
+     .nav .show{
+        height: 50vh;
+     }
+     .nav .social .icon i{
+        color: #5ddda0;
+     }
+     /* service section starts */
+     .service .cards{ 
+        grid-template-columns: repeat(1,1fr);
+     }
+    
+     /* service section ends */
+}
+@media (max-width:500px){
+
+    /* Hero section start */
+    .projects,.experience{
+        display: none;
+    }
+
+    /* Hero ends */
+    /* service section starts */
+    .service .cards .card h2{
+        font-size: 1.5 rem;
+    }
+     /* service section ends */
+
+     .work .container{
+        align-items: center;
+        justify-content: center;
+     }
+     form button{
+        width: 40%;
+     }
+
+}
